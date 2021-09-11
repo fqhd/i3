@@ -44,7 +44,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+A kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -87,16 +87,8 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+z layout tabbed
-bindsym $mod+e layout toggle split
-
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+space floating toggle
 
 # focus the parent container
 bindsym $mod+q focus parent
@@ -185,5 +177,8 @@ bar {
 exec_always xinput set-prop "ASUS ROG PUGIO" "libinput Accel Speed" -0.75
 exec_always feh --bg-scale ~/.config/i3/wallpaper.jpg
 exec xrandr --output DVI-D-0 --mode 1920x1080 --rate 144
+exec flameshot
 bindsym $mod+shift+x exec i3lock
 
+bindsym $mod+s exec flameshot gui
+bindsym $mod+shift+s exec flameshot screen -c
