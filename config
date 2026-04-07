@@ -196,6 +196,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # i3 gaps
 gaps inner 5
 gaps outer 5
+# This is just a test
 
 exec_always swaybg -i ~/Pictures/anime-moon-landscape.jpg -m fill
 bindsym $mod+Shift+x exec i3lock
